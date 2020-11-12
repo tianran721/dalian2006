@@ -1,9 +1,9 @@
 module.exports = {
-  devServer: {
+  /*  devServer: {
     overlay: {
       warnings: false,
       errors: false
     }
-  }
-  // lintOnSave: false 关闭eslint
+  }, */
+  lintOnSave: false //关闭eslint
 }
