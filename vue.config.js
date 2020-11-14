@@ -10,6 +10,10 @@ module.exports = {
       '/v2': {
         target: 'https://m.wowdsgn.com',
         changeOrigin: true
+      },
+      '/pages': {
+        target: 'https://m.wowdsgn.com',
+        changeOrigin: true
       }
     }
   }

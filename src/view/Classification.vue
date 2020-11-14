@@ -11,16 +11,32 @@
          </div>
          <div class="tab">
              <ul >
-                 <li>沙发<van-icon name="arrow" /></li>
-                 <li>板凳<van-icon name="arrow" /></li>
-                 <li>床<van-icon name="arrow" /></li>
-                 <li>柜架<van-icon name="arrow" /></li>
-                 <li>餐桌<van-icon name="arrow" /></li>
-                 <li>茶几和边桌<van-icon name="arrow" /></li>
-                 <li>书桌<van-icon name="arrow" /></li>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">沙发<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">板凳<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">床<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">柜架<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">餐桌<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">茶几<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">书桌<van-icon name="arrow" /></router-link>
+             </ul>
+          </div>
+           <div class="banner-a  banner-b">
+             <img src="https://m.wowdsgn.com/static/img/household.png" alt="">
+         </div>
+         <div class="tab-2">
+             <ul >
+                 <router-link to="/classification/shafa" tag="li" active-class="active">灯具<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">用餐<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">时尚生活<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">收纳<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">烹饪<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">纺织品<van-icon name="arrow" /></router-link>
+                 <router-link to="/classification/shafa" tag="li" active-class="active">家饰 <van-icon name="arrow" /></router-link>
+                <router-link to="/classification/shafa" tag="li" active-class="active">卫浴 <van-icon name="arrow" /></router-link>
              </ul>
           </div>
          </div>
+
     </div>
 
 </template>
@@ -66,6 +82,9 @@ export default {
          height: 115px;
      }
  }
+ .van-icon{
+     color: #ccc;
+ }
  .tab{
      width: 100%;
      text-align: center;
@@ -75,13 +94,14 @@ export default {
      margin: auto;
      display: flex;
      flex-direction: column;
-       height: 360px;
+
     li{
+        margin-bottom: 7px;
         flex: 1;
         height: 49px;
         line-height:49px ;
         font-size: 15px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #ccc;
         text-align: left;
         .van-icon{
             height: 49px;
@@ -90,5 +110,32 @@ export default {
         }
     }
  }
+.banner-b{
+    margin-top: 5px;
+}
+.tab-2{
+     width: 100%;
+     text-align: center;
+ }
+ .tab-2 ul{
+     width: 90%;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
 
+    li{
+        margin-bottom: 7px;
+        flex: 1;
+        height: 49px;
+        line-height:49px ;
+        font-size: 15px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        .van-icon{
+            height: 49px;
+            line-height: 49px;
+            float: right;
+        }
+    }
+ }
 </style>
