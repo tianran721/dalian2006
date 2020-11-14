@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="swiper-container">
+    <div class="swiper-container kerwin">
       <div class="swiper-wrapper">
         <slot></slot>
       </div>
@@ -22,9 +22,10 @@ export default {
       type: Boolean,
       default: true
     }
+
   },
   mounted() {
-    new Swiper('.swiper-container', {
+    new Swiper('.kerwin', {
       loop: this.loop,
       autoplay: this.autoplay,
       pagination: {

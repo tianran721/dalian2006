@@ -1,7 +1,10 @@
 <template>
   <div>
     <tabbar></tabbar>
+    <div class='pad'>
     <router-view></router-view>
+
+    </div>
   </div>
 </template>
 <script>
@@ -34,5 +37,8 @@ html {
 }
 ul li {
   list-style: none;
+}
+.pad{
+  padding-bottom: 50px;
 }
 </style>

@@ -8,8 +8,8 @@ import ShoppingCart from '@/view/ShoppingCart'
 import Recommended from '@/view/homepage/Recommended'
 import Goodies from '@/view/homepage/Goodies'
 import Potential from '@/view/homepage/Potential'
-import Shafa from '@/view//Shafa'
-//shafa
+import Shafa from '@/view/Shafa'
+import quanbu from '@/view/homepage/goodies/quanbu'
 
 Vue.use(VueRouter)
 
@@ -25,6 +25,10 @@ const routes = [
       {
         path: '/homepage/goodies', //好物
         component: Goodies
+      },
+      {
+        path: '/homepage/goodies/quanbu', //好物
+        component: quanbu
       },
       {
         path: '/homepage/potential', //品质
