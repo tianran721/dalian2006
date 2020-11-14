@@ -8,6 +8,8 @@ import ShoppingCart from '@/view/ShoppingCart'
 import Recommended from '@/view/homepage/Recommended'
 import Goodies from '@/view/homepage/Goodies'
 import Potential from '@/view/homepage/Potential'
+import Shafa from '@/view//Shafa'
+//shafa
 
 Vue.use(VueRouter)
 
@@ -37,6 +39,10 @@ const routes = [
   {
     path: '/classification',
     component: Classification
+  },
+  {
+    path: '/classification/shafa',
+    component: Shafa
   },
   {
     path: '/message',
