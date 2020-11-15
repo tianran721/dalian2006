@@ -1,6 +1,7 @@
 <template>
   <div>
-    Potential品质空间
+    <div @click="isClick">Potential品质空间</div>
+
     <swiper v-if="imgList.length">
       <div class="swiper-slide" v-for="item in imgList" :key="item.id">
         <img :src="item.bannerImgSrc" alt="" />
@@ -13,6 +14,11 @@
 import swiper from '../../../components/Swiper'
 import axios from 'axios'
 export default {
+  methods: {
+    isClick() {
+      console.log('222')
+    }
+  },
   components: {
     swiper: swiper
   },

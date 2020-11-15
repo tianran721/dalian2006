@@ -8,14 +8,15 @@ import ShoppingCart from '@/view/ShoppingCart'
 import Recommended from '@/view/homepage/Recommended'
 import Goodies from '@/view/homepage/Goodies'
 import Potential from '@/view/homepage/Potential'
-
+import Detail from '@/view/Detail'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/homepage',
     component: Homepage,
-    children: [ // 二级路由
+    children: [
+      // 二级路由
       {
         path: '/homepage/recommended', //推荐
         component: Recommended
@@ -47,6 +48,14 @@ const routes = [
     component: Myself
   },
   {
+    path: '/detail',
+    component: Detail
+  },
+  {
+    path: '/detail/:id',
+    component: Detail
+  },
+  {
     path: '/shoppingcart',
     component: ShoppingCart
   },
@@ -58,7 +67,6 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes
-
 })
 
 export default router

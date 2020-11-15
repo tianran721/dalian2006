@@ -1,7 +1,7 @@
 <template>
   <div>
     <tabbar></tabbar>
-    <router-view></router-view>
+    <section><router-view></router-view></section>
   </div>
 </template>
 <script>
@@ -34,5 +34,10 @@ html {
 }
 ul li {
   list-style: none;
+}
+section {
+  margin-bottom: 50px;
+  background: white;
+  z-index: 100;
 }
 </style>

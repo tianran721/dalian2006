@@ -23,7 +23,9 @@ export default {}
   color: red;
 }
 ul {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   li {
     flex: 1;
   }
