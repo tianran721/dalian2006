@@ -1,5 +1,6 @@
 module.exports = {
-  // lintOnSave: false, //关闭eslint
+
+  lintOnSave: true, //关闭eslint
   devServer: {
     overlay: {
       //忽略遮罩层
@@ -16,6 +17,10 @@ module.exports = {
         changeOrigin: true
       },
       '/product': {
+        target: 'https://m.wowdsgn.com',
+        changeOrigin: true
+      },
+      '/itemdetail': {
         target: 'https://m.wowdsgn.com',
         changeOrigin: true
       }

@@ -52,7 +52,9 @@ export default {
     background: white;
     opacity: 0.3;
 
-    color: red;
+    color:#000;
+    font-weight: bolder;
+    font-size: 17px;
 }
 .swiper-slide:nth-of-type(1){
     margin-left: 20px;
@@ -60,7 +62,8 @@ export default {
 .ischeck  {
     background: #e6e6e6;
     opacity: 0.6;
-    border: 2px solid white;
+    border: 1px solid white;
+
 }
 
 </style>

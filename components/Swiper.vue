@@ -24,6 +24,7 @@ export default {
     }
   },
   mounted() {
+    /*  eslint-disable no-new */
     new Swiper('.swiper-container', {
       loop: this.loop,
       autoplay: this.autoplay,

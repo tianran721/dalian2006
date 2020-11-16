@@ -23,7 +23,7 @@ export default {
     new Swiper('.swiper-container', {
       loop: this.loop,
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 30,
       freeMode: false
     })
   }
@@ -41,7 +41,7 @@ export default {
     top: 60px;
     left: 0;
     }
-    .swiper-wrapper{
-        padding-left:20px
-    }
+    /* .swiper-wrapper{
+       // padding-left:20px
+    } */
 </style>
