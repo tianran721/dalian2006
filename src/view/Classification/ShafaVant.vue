@@ -4,7 +4,7 @@
             <van-tab title="上新">
                 <div class="tad-1">
                   <ul >
-                    <li v-for="item in datalist" :key="item.productId">
+                    <li v-for="item in datalist" :key="item.productId" @click="shangxinclick(item.productId)">
                       <img :src="item.productImg" alt="">
                        <p class="active">{{item.productName}}</p>
                        <span class="active">￥{{item.sellPrice}}</span>
@@ -16,7 +16,7 @@
             <van-tab title="销量">
                  <div class="tad-1">
                   <ul >
-                    <li v-for="item in datalistb" :key="item.productId">
+                    <li v-for="item in datalistb" :key="item.productId" @click="xiaoliangclick(item.productId)">
                       <img :src="item.productImg" alt="">
                        <p class="active">{{item.productName}}</p>
                        <span class="active">￥{{item.sellPrice}}</span>
@@ -28,7 +28,7 @@
             <van-tab title="价格">
                     <div class="tad-1">
                   <ul >
-                    <li v-for="item in datalistc" :key="item.productId">
+                    <li v-for="item in datalistc" :key="item.productId"  @click="jiageclick(item.productId)">
                       <img :src="item.productImg" alt="">
                        <p class="active">{{item.productName}}</p>
                        <span class="active">￥{{item.sellPrice}}</span>
@@ -74,8 +74,21 @@ export default {
       // console.log(res.data)
         this.datalistc = res.data.data
       })
+  },
+  methods: {
+    shangxinclick(id) {
+      this.$router.push(`/item/${id}`)
+    },
+    xiaoliangclick(id) {
+      this.$router.push(`/item/${id}`)
+    },
+    jiageclick(id) {
+      this.$router.push(`/item/${id}`)
+    }
+
   }
 }
+
 </script>
 <style lang="scss" scoped>
 *{margin: 0;

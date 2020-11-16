@@ -10,7 +10,9 @@ import Goodies from '@/view/homepage/Goodies'
 import Potential from '@/view/homepage/Potential'
 import Shafa from '@/view//Shafa'
 //shafa
-
+import ShafaDetail from '@/view/Classification/ShafaDetail'
+//登录拦截
+import Login from '@/view/Login'
 Vue.use(VueRouter)
 
 const routes = [
@@ -41,8 +43,12 @@ const routes = [
     component: Classification
   },
   {
-    path: '/classification/shafa',
+    path: '/classification/shafa/',
     component: Shafa
+  },
+  {
+    path: '/item/:myid', //沙发详情页
+    component: ShafaDetail
   },
   {
     path: '/message',
@@ -57,6 +63,11 @@ const routes = [
     component: ShoppingCart
   },
   {
+    path: '/login',
+    component: Login
+  },
+
+  {
     path: '*', // 重定向
     redirect: '/homepage'
   }
@@ -65,6 +76,27 @@ const routes = [
 const router = new VueRouter({
   routes: routes
 
+})
+
+//全局守卫
+
+router.beforeEach((to, from, next) => {
+  // console.log(to)
+
+  var permission = ['/shoppingcart', '/myself', '/message']
+
+  if (permission.includes(to.path)) {
+    // 是否已经登录
+    // console.log("检查")
+    if (localStorage.getItem('token')) {
+      next()
+    } else {
+      //重定向到 login
+      next('/login')
+    }
+  } else {
+    next()
+  }
 })
 
 export default router
