@@ -44,12 +44,24 @@ const routes = [
     component: Message
   },
   {
+    path: '/search/view',
+    component: () => import('@/view/Search')
+  },
+  {
+    path: '/search/result',
+    component: () => import('@/view/search/result')
+  },
+  {
     path: '/myself',
     component: Myself
   },
   {
     path: '/detail',
     component: Detail
+  },
+  {
+    path: '/item/:id',
+    component: () => import('@/view/search/Item')
   },
   {
     path: '/detail/:id',

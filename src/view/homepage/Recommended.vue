@@ -16,11 +16,13 @@
           alt=""
       /></a>
     </div>
-    <div class="banner-group" v-for="item in imgList2" :key="item.id">
-      <div class="banner-item">
-        <a href="javascript:;">
-          <img :src="item.bannerImgSrc" />
-        </a>
+    <div class="banner-group">
+      <div class="banner-item" v-for="item in imgList2" :key="item.id">
+        <div class="banner-item">
+          <a href="javascript:;">
+            <img :src="item.bannerImgSrc" />
+          </a>
+        </div>
       </div>
     </div>
 
@@ -35,6 +37,10 @@
 <script>
 import swiper from '../../../components/Swiper'
 import axios from 'axios'
+import Vue from 'vue'
+import { Search } from 'vant'
+
+Vue.use(Search)
 export default {
   components: {
     swiper: swiper
@@ -79,28 +85,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner {
-  img {
-    display: block;
-    width: 100%;
-  }
+img {
+  width: 100%;
 }
+
 .banner-group {
-  overflow: hidden;
-  height: 100px;
+  display: flex;
   .banner-item {
-    float: left;
-    width: 100px;
-    height: 100px;
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
     img {
-      display: block;
-      width: 100%;
+      width: 100px;
+      height: 140px;
     }
-  }
-}
-.page1 {
-  img {
-    width: 100%;
   }
 }
 </style>

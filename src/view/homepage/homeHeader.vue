@@ -23,11 +23,13 @@ export default {}
   color: red;
 }
 ul {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   li {
-    flex: 1;
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
   }
 }
 </style>

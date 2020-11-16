@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tabbar></tabbar>
+    <tabbar v-show="$store.state.tabbar"></tabbar>
     <section><router-view></router-view></section>
   </div>
 </template>

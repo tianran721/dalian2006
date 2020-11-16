@@ -1,6 +1,5 @@
 <template>
   <div>
-    Goodies
     <swiper v-if="imgList.length">
       <div class="swiper-slide" v-for="item in imgList" :key="item.id">
         <img :src="item.bannerImgSrc" alt="" />

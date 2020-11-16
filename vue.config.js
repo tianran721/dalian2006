@@ -14,6 +14,10 @@ module.exports = {
       '/recommend': {
         target: 'https://m.wowdsgn.com',
         changeOrigin: true
+      },
+      '/product': {
+        target: 'https://m.wowdsgn.com',
+        changeOrigin: true
       }
     }
   }

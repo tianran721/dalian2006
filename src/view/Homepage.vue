@@ -1,6 +1,11 @@
 <template>
   <div>
-    <van-search v-model="value" placeholder="请输入搜索关键词" />
+    <van-search
+      v-model="value"
+      placeholder="请输入搜索关键词"
+      @focus="onfocus"
+      label="尖叫设计"
+    />
     <home-header></home-header>
 
     <router-view></router-view>
@@ -23,6 +28,11 @@ export default {
   },
   components: {
     homeHeader: homeHeader
+  },
+  methods: {
+    onfocus() {
+      this.$router.push('/search/view')
+    }
   }
 }
 </script>
